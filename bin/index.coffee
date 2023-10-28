@@ -71,10 +71,14 @@ update = (content) ->
 # main
 [...content] = process.argv[2...]
 
+[head, ...tail] = content
 
-if content.length > 1
- update content
-else if content.length==1
- J().read (data) -> console.log data[currdir]
+if content.length >= 1
+
+ if head is '.'
+  J().read (data) -> console.log data[currdir]
+ else
+  update content
+
 else
  J().read console.log
