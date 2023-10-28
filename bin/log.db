@@ -1,5 +1,5 @@
 {
-  "/home/nonnax/coffee/sandbox/log": [
+  "/coffee/sandbox/log": [
     {
       "10/27/2023, 11:11:31 PM": "yes"
     },
@@ -29,9 +29,15 @@
     },
     {
       "10/28/2023, 4:14:31 PM": "protect"
+    },
+    {
+      "10/28/2023, 4:22:45 PM": "test"
+    },
+    {
+      "10/28/2023, 9:45:28 PM": "lets try this"
     }
   ],
-  "/home/nonnax/coffee/sandbox": [
+  "/coffee/sandbox": [
     {
       "10/27/2023, 11:11:48 PM": "you got it"
     },
@@ -39,20 +45,23 @@
       "10/28/2023, 3:11:30 PM": "coffeescript global CONSTANT does not propagate inside functor. use a default value param instead"
     }
   ],
-  "/home/nonnax": [
+  "": [
     {
       "10/27/2023, 11:17:18 PM": "ahh that is good"
     }
   ],
-  "/home/nonnax/.config": [
+  "/.config": [
     {
       "10/27/2023, 11:22:22 PM": "doing the laundry"
     },
     {
       "10/27/2023, 11:22:29 PM": "again"
+    },
+    {
+      "10/28/2023, 4:16:13 PM": "protected"
     }
   ],
-  "/home/nonnax/coffee/sandbox/module_local": [
+  "/coffee/sandbox/module_local": [
     {
       "10/27/2023, 11:46:27 PM": "im here"
     }

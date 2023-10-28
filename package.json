@@ -11,5 +11,8 @@
   "keywords": [],
   "author": "nonnax <ironald@gmail.com>",
   "license": "MIT",
+  "directories": {
+    "lib": "lib"
+  },
   "description": ""
 }

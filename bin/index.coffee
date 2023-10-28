@@ -3,10 +3,12 @@
 os = require 'os'
 path = require 'path'
 fs = require 'fs'
+dir = require '../lib/dir'
 
 home = os.homedir()
 currdir = process.cwd()
 appdir = __dirname
+pwd = dir.Dir().pwd().short
 
 # J, JSON read/write factory
 J= (fname='log.db')->
@@ -18,7 +20,7 @@ J= (fname='log.db')->
  write = (data)->
   fs.promises
    .writeFile(f, to_s(data)  ) # neat formatting
-   .then(console.log data)
+   .then(() -> console.log data)
    .catch((err)->console.log err)
 
  read = (fn)->
@@ -52,7 +54,7 @@ DB = (db={})->
  # add and return a new DB factory
  add = (content)->
   e = {[timenow()]: content}
-  (newdb[currdir] ||= []).push e
+  (newdb[pwd] ||= []).push e
   DB(newdb)
 
  value = (fn) ->
@@ -76,7 +78,7 @@ update = (content) ->
 if content.length >= 1
 
  if head is '.'
-  J().read (data) -> console.log data[currdir]
+  J().read (data) -> console.log data[pwd]
  else
   update content
 
