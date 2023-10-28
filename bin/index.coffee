@@ -7,13 +7,14 @@ fs = require 'fs'
 home = os.homedir()
 currdir = process.cwd()
 appdir = __dirname
-DBNAME = 'log.db'
 
 # J, JSON read/write factory
-J= (fname=DBNAME)->
+J= (fname='log.db')->
  f=path.join(__dirname, fname)
+ backupFile = path.join __dirname, "backup.#{fname}"
 
  to_s = (data)->JSON.stringify( data, null, 2)
+
  write = (data)->
   fs.promises
    .writeFile(f, to_s(data)  ) # neat formatting
@@ -23,11 +24,20 @@ J= (fname=DBNAME)->
  read = (fn)->
   fs.promises
    .readFile(f)
-   .then((data)->fn( JSON.parse(data) ) )
+   .then((data)->
+    backup()
+    fn( JSON.parse(data) )
+   )
    .catch((err)->
-    console.log [err.message, "oops! creating #{DBNAME}... do it again"].join("\n")
+    console.log [err.message, "oops! creating #{f}... do it again"].join("\n")
     write({}, to_s({}) )
    )
+
+ backup = ->
+  fs.promises
+  .copyFile(f, backupFile)
+  .then(()->console.log 'backup saved.')
+  .catch(()->console.log 'backup error!')
 
  {read, write}
 
