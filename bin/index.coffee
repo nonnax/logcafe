@@ -4,42 +4,58 @@ os = require 'os'
 path = require 'path'
 fs = require 'fs'
 dir = require '../lib/dir'
+{toYAML:Y} = require 'toolkit'
 
-home = os.homedir()
-currdir = process.cwd()
-appdir = __dirname
-pwd = dir.Dir().pwd().short
+# utils/global functions
+pwd = ->
+  dir.Dir()
+  .pwd()
+  .short
+
+pathFullname = (f) ->
+  path.join __dirname, f
+
+timenow = ->
+  (new Date).toLocaleString()
+
+to_s = (data) ->
+  JSON.stringify( data, null, 2)
+
+writeBlank = (f) ->
+  fs.writeFileSync(f, "{}")
+
+backupFile = (f, bak)->
+ fs.promises
+ .copyFile(f, bak)
+ .then(()->console.log 'backup saved.')
+ .catch(()->console.log 'backup error!')
+
 
 # J, JSON read/write factory
-J= (fname='log.db')->
- f=path.join(__dirname, fname)
- backupFile = path.join __dirname, "backup.#{fname}"
-
- to_s = (data)->JSON.stringify( data, null, 2)
+J = (fname='log.db')->
+ f       = pathFullname fname
+ bakFile = pathFullname "backup.#{fname}"
 
  write = (data)->
+  backupFile(f, bakFile)
+
   fs.promises
    .writeFile(f, to_s(data)  ) # neat formatting
-   .then(() -> console.log data)
+   .then(() -> console.log Object.keys(data))
    .catch((err)->console.log err)
 
  read = (fn)->
   fs.promises
    .readFile(f)
    .then((data)->
-    backup()
-    fn( JSON.parse(data) )
+    d = if data? then JSON.parse(data) else String(data)
+    fn( d )
    )
    .catch((err)->
     console.log [err.message, "oops! creating #{f}... do it again"].join("\n")
-    write({}, to_s({}) )
-   )
+    writeBlank(f) unless fs.existsSync(f)
 
- backup = ->
-  fs.promises
-  .copyFile(f, backupFile)
-  .then(()->console.log 'backup saved.')
-  .catch(()->console.log 'backup error!')
+   )
 
  {read, write}
 
@@ -48,13 +64,10 @@ J= (fname='log.db')->
 DB = (db={})->
  newdb = {...db} # clone
 
- timenow = ->
-  (new Date).toLocaleString()
-
  # add and return a new DB factory
  add = (content)->
-  e = {[timenow()]: content}
-  (newdb[pwd] ||= []).push e
+  e = {time: timenow(), log: content}
+  (newdb[pwd()] ||= []).push e
   DB(newdb)
 
  value = (fn) ->
@@ -65,10 +78,14 @@ DB = (db={})->
 # read/write new data
 update = (content) ->
  J().read (obj) ->
+
   DB(obj)
   .add content.join(' ')
   .value (v)-> J().write (v)
 
+
+not_found = ->
+  [{info: '404'}]
 
 # main
 [...content] = process.argv[2...]
@@ -78,9 +95,16 @@ update = (content) ->
 if content.length >= 1
 
  if head is '.'
-  J().read (data) -> console.log data[pwd]
+  J()
+  .read (data) ->
+    d = if data[pwd()]? then data[pwd()] else not_found()
+    console.log Y(d)
  else
   update content
 
 else
- J().read console.log
+ J()
+ .read (data) ->
+    Object.keys(data).map (k)->
+      console.log k
+      console.log Y(data[k])

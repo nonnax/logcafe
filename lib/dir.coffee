@@ -8,6 +8,7 @@ Dir= (path="") ->
  home= -> Dir(os.homedir())
  pwd= -> Dir(process.cwd())
  name= -> Dir(__dirname)
+ exists= (f) -> fs.existsSync(f)
  value= -> path
 
  {
@@ -15,6 +16,7 @@ Dir= (path="") ->
   pwd,
   name,
   value,
+  exists,
   short: path.replace os.homedir() , ''
  }
 

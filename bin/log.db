@@ -1,69 +1,188 @@
 {
   "/coffee/sandbox/log": [
     {
-      "10/27/2023, 11:11:31 PM": "yes"
+      "time": "10/27/2023, 11:11:31 PM",
+      "log": "yes"
     },
     {
-      "10/27/2023, 11:11:36 PM": "cool"
+      "time": "10/27/2023, 11:11:36 PM",
+      "log": "cool"
     },
     {
-      "10/28/2023, 11:16:24 AM": "here we go again"
+      "time": "10/28/2023, 11:16:24 AM",
+      "log": "here we go again"
     },
     {
-      "10/28/2023, 11:18:25 AM": "do this after writing"
+      "time": "10/28/2023, 11:18:25 AM",
+      "log": "do this after writing"
     },
     {
-      "10/28/2023, 12:36:00 PM": "so what went wrong?"
+      "time": "10/28/2023, 12:36:00 PM",
+      "log": "so what went wrong?"
     },
     {
-      "10/28/2023, 12:37:06 PM": "so what went wrong?"
+      "time": "10/28/2023, 12:37:06 PM",
+      "log": "so what went wrong?"
     },
     {
-      "10/28/2023, 3:40:26 PM": "testing backup"
+      "time": "10/28/2023, 3:40:26 PM",
+      "log": "testing backup"
     },
     {
-      "10/28/2023, 3:41:51 PM": "testing backup"
+      "time": "10/28/2023, 3:41:51 PM",
+      "log": "testing backup"
     },
     {
-      "10/28/2023, 3:42:41 PM": "testing backup"
+      "time": "10/28/2023, 3:42:41 PM",
+      "log": "testing backup"
     },
     {
-      "10/28/2023, 4:14:31 PM": "protect"
+      "time": "10/28/2023, 4:14:31 PM",
+      "log": "protect"
     },
     {
-      "10/28/2023, 4:22:45 PM": "test"
+      "time": "10/28/2023, 4:22:45 PM",
+      "log": "test"
     },
     {
-      "10/28/2023, 9:45:28 PM": "lets try this"
+      "time": "10/28/2023, 9:45:28 PM",
+      "log": "lets try this"
     }
   ],
   "/coffee/sandbox": [
     {
-      "10/27/2023, 11:11:48 PM": "you got it"
+      "time": "10/27/2023, 11:11:48 PM",
+      "log": "you got it"
     },
     {
-      "10/28/2023, 3:11:30 PM": "coffeescript global CONSTANT does not propagate inside functor. use a default value param instead"
+      "time": "10/28/2023, 3:11:30 PM",
+      "log": "coffeescript global CONSTANT does not propagate inside functor. use a default value param instead"
+    },
+    {
+      "time": "11/17/2023, 7:03:22 PM",
+      "log": "changed viewer to emit YAML"
     }
   ],
   "": [
     {
-      "10/27/2023, 11:17:18 PM": "ahh that is good"
+      "time": "10/27/2023, 11:17:18 PM",
+      "log": "ahh that is good"
     }
   ],
   "/.config": [
     {
-      "10/27/2023, 11:22:22 PM": "doing the laundry"
+      "time": "10/27/2023, 11:22:22 PM",
+      "log": "doing the laundry"
     },
     {
-      "10/27/2023, 11:22:29 PM": "again"
+      "time": "10/27/2023, 11:22:29 PM",
+      "log": "again"
     },
     {
-      "10/28/2023, 4:16:13 PM": "protected"
+      "time": "10/28/2023, 4:16:13 PM",
+      "log": "protected"
     }
   ],
   "/coffee/sandbox/module_local": [
     {
-      "10/27/2023, 11:46:27 PM": "im here"
+      "time": "10/27/2023, 11:46:27 PM",
+      "log": "im here"
+    }
+  ],
+  "/coffee/sandbox/test_d3": [
+    {
+      "time": "10/29/2023, 10:00:51 AM",
+      "log": "document.title=title"
+    },
+    {
+      "time": "10/29/2023, 10:03:01 AM",
+      "log": "d3 many csv data superimposed one over another unified by similar timescale"
+    }
+  ],
+  "/coffee/sandbox/job": [
+    {
+      "time": "10/30/2023, 12:59:12 PM",
+      "log": "most inquiries for countries we do not yet offer"
+    }
+  ],
+  "/coffee/sandbox/logu": [
+    {
+      "time": "10/30/2023, 1:09:04 PM",
+      "log": "nothing here"
+    },
+    {
+      "time": "11/17/2023, 7:05:35 PM",
+      "log": "changed notification after update"
+    }
+  ],
+  "/coffee/sandbox/cooking": [
+    {
+      "time": "10/30/2023, 6:12:42 PM",
+      "log": "ilocano adobo. 1kg pork or chicken. 4 cloves garlic. 2 knorr cubes. 60g soy sauce. 40g vinegar"
+    },
+    {
+      "time": "10/30/2023, 6:14:17 PM",
+      "log": "ilocano adobo. add all ingredients. pre cook. add 200g water. stir every 15-20mins. let water evaporate and oil comes out. done"
+    },
+    {
+      "time": "11/15/2023, 2:58:24 PM",
+      "log": "cookada"
+    },
+    {
+      "time": "11/16/2023, 9:25:31 AM",
+      "log": "The Classic Method When you think about making rice, this is the technique that probably comes to mind because it's the most classic. Rinse the rice. Use the right ratio of water. Add 2 parts water and 1 part rice to a large pot. For slightly firmer rice, use 1 part liquid to 2/3 parts rice. Bring the water to a boil. Reduce heat to low, cover the pot with a tight fitting lid, and maintain a gentle simmer. Cook without peeking or stirring. Cook until the water is absorbed, about 18 minutes. Try not to peek until the end of the cooking time so the steam doesn't escape. *** WHATEVER YOU DO, DON'T MIX THE RICE WHILE IT'S COOKING — THIS WILL LEAD TO GUMMY RICE. Let the rice rest covered. Turn off the heat and let the rice sit, covered, for 10 minutes. During this time, the rice will steam for extra fluffy results. Fluff the rice with a fork. https://www.foodnetwork.com/how-to/articles/how-to-make-perfect-rice-a-step-by-step-guide --------------------------------------------------------------------------------------------------------------- How to make boiled rice Chinese style? Boiled Rice - Chinese Recipes For All Bring water to the boil on high heat, there is no need to stir at all. Then on low heat, cover the pan with a lid and simmer the rice for 15-20 minutes. You do not need to stir or uncover the lid during this time. After this time you should have perfectly cooked boiled rice. https://chineserecipesforall.com/recipes/view/boiled_rice ---------------------------------------------------------------------------------------------------------------"
+    }
+  ],
+  "/lua/moon/sandbox": [
+    {
+      "time": "10/31/2023, 12:52:15 PM",
+      "log": "learning moonscript basics"
+    }
+  ],
+  "/Videos": [
+    {
+      "time": "10/31/2023, 6:48:20 PM",
+      "log": "Travelers - TV series 2016"
+    },
+    {
+      "time": "10/31/2023, 7:03:27 PM",
+      "log": "testing micro"
+    },
+    {
+      "time": "10/31/2023, 7:03:57 PM",
+      "log": "#!/usr/bin/env txt\n# Id$ nonnax 2023-10-31 18:41:33 +0800\nTV: 2016 Travelers - A federal agent tracks four people who suddenly seem to possess entirely new personalities, leading to a startling discovery about humanity's future.\nCasts: Eric McCormack, MacKenzie Porter, Nesta Cooper, Jared Abrahamson, Reilly Dolman"
+    },
+    {
+      "time": "10/31/2023, 10:30:12 PM",
+      "log": "TV: 2019 Impulse - Season 2\nCasts: Maddie Hasson, Missi Pyle, Sarah Desjardins, Enuka Okuma, Craig Arnold"
+    },
+    {
+      "time": "11/3/2023, 7:14:27 PM",
+      "log": "2021-TV Midnight Mass - Season 1 Genre: Mystery, Drama Casts: Hamish Linklater, Zach Gilford, Annabeth Gish, Samantha Sloyan, Michael Trucco"
+    },
+    {
+      "time": "11/3/2023, 9:56:44 PM",
+      "log": "TV 2017. Future Man. 7.7 Haley Joel Osment"
+    },
+    {
+      "time": "11/9/2023, 12:47:23 AM",
+      "log": "TV - The Messengers (2015)"
+    }
+  ],
+  "/coffee/github": [
+    {
+      "time": "11/10/2023, 10:33:11 AM",
+      "log": "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"
+    },
+    {
+      "time": "11/10/2023, 10:34:07 AM",
+      "log": "new token 4202 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 Last used within the last 9 months year2023 — admin:public_key, admin:repo_hook, admin:ssh_signing_key, gist, repo Expires on Wed, Nov 15 2023."
+    }
+  ],
+  "/coffee/sandbox/coingecko/scaled": [
+    {
+      "time": "11/17/2023, 11:46:58 AM",
+      "log": "real goal is simplifying code readability and logic over performance"
     }
   ]
 }
